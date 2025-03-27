@@ -5,6 +5,11 @@
 .screen_out{
     display: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 html,body {
     color:#323232; margin: auto;
 }
@@ -157,6 +162,20 @@ main img {
 main h2 {text-align: center; display: block; margin-top: 20px;
 }
 
+main section div h2::before{
+    display: inline-block;
+    content:'';
+    width: 4px;
+    top: 5px;
+    border-radius: 5px;
+    height: 13px;
+    right: 10px;
+    margin-right: 10px;
+    background: #17246c;
+}
+
+
+
 main h3 {margin: 25px 0; text-align: center; display: block; margin-bottom: 15px; font-family: "Gaegu", sans-serif; font-size:1.2rem; font-weight: 400;}
 
 main p { margin-top: 20px; margin: auto;
@@ -213,6 +232,23 @@ footer li:last-child select{
     margin-top: 10px;
 }
 
+a#goTop{
+    position: fixed; bottom:50px; right: 10px; z-index: 10; padding: 15px; background:radial-gradient(#ffffff71, #d7d7d771);
+    border-radius: 8px; display:none;
+    text-align: center;
+}
+
+#sideSection{
+    display: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 
 
 @media(min-width:376px) and ( max-width:767px){
@@ -221,6 +257,18 @@ footer li:last-child select{
         flex-direction: column;
         align-items: center;
         box-shadow: 0 2px 15px #1c246c;
+    }
+
+    main section div h2::before{
+        display: inline-block;
+        content:'';
+        width: 3px;
+        top: 5px;
+        border-radius: 5px;
+        height: 13px;
+        right: 20px;
+        margin-right: 10px;
+        background: #17246c;
     }
 
     header nav ul li.mainmenu {
@@ -237,6 +285,10 @@ footer li:last-child select{
 
     footer ul{
         flex-direction: column;
+    }
+
+    #sideSection{
+        display: none;
     }
 }
 
@@ -270,6 +322,21 @@ footer li:last-child select{
     main section:nth-child(1) img{
         width: 75%; padding: 10px;
     }
+
+    main section div h2::before{
+        display: inline-block;
+        content:'';
+        width: 4px;
+        top: 5px;
+        border-radius: 5px;
+        height: 15px;
+        right: 20px;
+        margin-right: 10px;
+        background: #17246c;
+    }
+
+
+
     footer{
         width: 100%;
         padding: 0  50px;
@@ -317,6 +384,28 @@ footer li:last-child select{
         margin-top: 10px;
         margin-bottom: 15px;
     }
+
+    #sideSection{
+        display: flex;
+        position: fixed;
+        bottom:45%; right: 0; z-index: 10;
+        flex-direction: column;
+        padding: 8px;
+/*         border-left: 1px solid #17246c;
+        border-top: 1px solid #17246c;
+        border-bottom: 1px solid #17246c; */
+        background-color: #f7f7f770;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: -3px 0 10px #17246c5f;
+        opacity: 0.8;
+    }
+
+    #sideSection button {
+        border-radius: 50%; background: #17246c; width: 13px;
+        height: 13px; border: none;
+        margin: 10px 0;
+    }
 }
 
 @media (min-width:1025px) and (max-width:1400px){
@@ -345,6 +434,21 @@ footer li:last-child select{
    main section:nth-child(1) img{
        width: 75%; padding: 10px;
    }
+
+   main section div h2::before{
+    display: inline-block;
+    content:'';
+    width: 5px;
+    top: 5px;
+    border-radius: 5px;
+    height: 15px;
+    right: 20px;
+    margin-right: 10px;
+    background: #17246c;
+}
+
+
+
    footer{
        width: 100%;
        padding: 0  50px;
@@ -393,6 +497,10 @@ footer li:last-child select{
        left:20px;
        margin-top: 10px;
    }
+
+   #sideSection{
+    display: none;}
+    
 }
 
 
@@ -449,7 +557,7 @@ footer li:last-child select{
     }
     
     main section:nth-child(1) img{
-        width: 95%; margin-top: 10px; border-radius: 15px;
+        width: 65%; margin-top: 10px; border-radius: 15px;
     }
 
     main section .mainContents{
@@ -459,6 +567,18 @@ footer li:last-child select{
         padding: 5px;
     }
     
+    main section div h2::before{
+        display: inline-block;
+        content:'';
+        width: 10px;
+        top: 2px;
+        border-radius: 5px;
+        height: 35px;
+        right: 20px;
+        margin-right: 20px;
+        background: #17246c;
+    }
+
     main section div h2 {
         font-size: 3rem; padding: 10px 0; width: fit-content; text-align: center; margin: auto; 
         margin-bottom: 1px;
@@ -466,7 +586,8 @@ footer li:last-child select{
 
 
     main section div h3 {
-        font-size: 2.4rem; padding: 5px 0; /* border: 1px solid red; */ text-align: center; display: block;
+        font-size: 2.4rem; padding: 10px 0; /* border: 1px solid red; */ text-align: center; display: block;
+        margin: 50px 0;
     }
 
     
@@ -486,15 +607,42 @@ footer li:last-child select{
     } */
 
     footer li:nth-child(1){
-        flex: 0.2; 
+        flex: 0.1; 
     }
     
     footer li:nth-child(2){
-        flex: 0.5; 
+        flex: 0.2; 
     }
     
     footer li:nth-child(2) p {
-        text-align: center;
+        text-align: center; font-size: 1rem;
     }
 
+    footer li:nth-child(3) a {
+        text-align: center; padding: 3px 0;
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    #sideSection{
+        display: flex;
+        position: fixed;
+        bottom:45%; right: 0; z-index: 10;
+        flex-direction: column;
+        padding: 8px;
+    /*  border-left: 1px solid #17246c;
+        border-top: 1px solid #17246c;
+        border-bottom: 1px solid #17246c; */
+        background-color: #f7f7f770;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: -3px 0 10px #17246c5f;
+        opacity: 0.8;
+    }
+    
+    #sideSection button {
+        border-radius: 50%; background: #17246c; width: 12px;
+        height: 12px; border: none;
+        margin: 15px 0;
+    }
 } 
