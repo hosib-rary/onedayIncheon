@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개항장 스트리트 투어 안내</title>
+<!--     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/852e797e1d.js" crossorigin="anonymous"></script> -->
+    <!--폰트 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Gothic+A1:wght@300;400;700;800&family=IBM+Plex+Sans+KR&family=Kaushan+Script&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <!--폰트 불러오기 끝-->
+    <link rel="stylesheet" href="css/container.css"> <!--기본 css-->
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#"><button type="button" id="logo"></button></a>  
+        </h1>
+        <nav>
+            <ul>
+                    <li class="mainmenu"><a href="#information01">개항장소개</a></li>
+                    <li class="mainmenu"><span>|</span></li>
+                    <li class="mainmenu"><a href="#information02">개항장거리 명소</a></li>
+                    <li class="mainmenu"><span>|</span></li>
+                    <li class="mainmenu"><a href="#information03">개항장거리 음식</a></li>
+                    <li class="mainmenu"><span>|</span></li>
+                    <li class="mainmenu"><a href="#information04">개항장거리 숙소</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--상단 메뉴 끝, 슬라이드 시작-->
+    <div class="slidebox">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <a>
+                    <label for="slide03" class="prev"></label>
+                    <img src="images/slide01.jpg">
+                    <label for="slide02" class="next"></label>
+                </a>
+            </li>
+            <li class="slideitem">
+                <a>
+                    <label for="slide01" class="prev"></label>
+                    <img src="images/slide02.jpg">
+                    <label for="slide03" class="next"></label>
+                </a>
+            </li>
+            <li class="slideitem">
+                <a>
+                    <label for="slide02" class="prev"></label>
+                    <img src="images/slide03.jpg">
+                    <label for="slide01" class="next"></label>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--슬라이드 이벤트 구간 끝, 본문구간인 메인 컨텐츠 시작-->    
+    <div id="layout">
+        <main>
+            <section>
+                <div>
+                    <h2 id="information01">개항장거리 소개</h2>
+                    <h3>역사가 살아 숨쉬는,개항장 거리.</h3>
+                    <img src="images/gaehangjang01.jpg" alt="개항장거리1" class="gaehang_photo">
+                    <p>
+                        인천광역시 중구 송학동과 중앙동 일대 지역으로 구한말부터 일제강점기 사이에 조성된 근대 문화유적지가 다양하게 존재하는 곳이다. '개항장 누리길'이라고도 한다. 인천 차이나타운, 송월동 동화마을과도 연결되기 때문에 당일 코스로 돌아볼 수 있는 여행지이며 일부 공간에서는 사진 촬영하기 좋은 포토스팟이 있기도 하다.
+                    </p>
+                </div>
+            </section>
+            <section>           
+                <div>
+                    <h2 id="information02">개항장거리 명소소개</h2>                    
+                    <h3>개항장거리</h3>
+                    <div class="box_photo">
+                        <img src="images/gaehangjang02.jpg" alt="개항장거리2" class="box_photo1">
+                        <img src="images/gaehangjang03.jpg" alt="개항장거리3" class="box_photo1">
+                    </div>                   
+                    <p>
+                        다소 상업적인 차이나타운보다 훨씬 볼거리가 많고 골목마다 돌아보면 옛 일본식 적산가옥과 전통적인 가옥,은행건물, 박물관등 이색적인 건물이 많은 것이 특징이다. 매년 늦 여름과 초가을 쯔음에 인천개항장 문화재 야행이라는 축제가 열려 많은 관광객들이 찾는 관광지이기도 하다.
+                    </p>
+                    <hr>              
+                    <h3>월미도</h3>
+                    <div class="box_photo">
+                        <img src="images/wolmypark01.jpg" alt="월미도1" class="box_photo1">
+                        <img src="images/wolmypark02.jpg" alt="월미도2" class="box_photo1">
+                    </div>    
+                    <p>
+                        달의 꼬리를 닮았다하여 이름 붙여진 월미도(月尾島)는 러일 전쟁, 병인양요 및 인천상륙작전 등 근대역사의 주무대이자 월미도 조탕으로 유명했던 한국을 대표하는 유원지이다. 월미놀이공원달의 꼬리를 닮았다 하여 월미도라고 이름 붙은 이곳에는 국내 유원지를 대표하는 월미놀이공원이 있다.
+                    </p>
+                    <hr>
+                    <h3>차이나타운
+                    </h3>
+                    <div class="box_photo">
+                        <img src="images/chinatown1.jpg" alt="차이나타운1" class="box_photo1">
+                        <img src="images/chinatown2.jpg" alt="차이나타운2" class="box_photo1">
+                    </div>    
+                    <p>
+                        소개의 글 인천 차이나타운은 인천시 중구 선린동과 북성동 일대에 형성된 화교밀집지역이다. 1883년(고종 20) 인천항이 개항되고 이듬해 1884년 지금의 선린동 일대에 청나라 조계지가 설치되면서 중국인들이 이곳에 정착하게 되었다.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2 id="information03">개항장거리 음식소개</h2>
+                    <h3>차이나타운 짜장면</h3>
+                    <div class="box_photo">
+                        <img src="images/Jajangmyeon.jpg" alt="차이나타운 짜장면1" class="box_photo1">
+                        <img src="images/Jajangmyeon2.jpg" alt="차이나타운 짜장면2" class="box_photo1">
+                    </div>   
+                    <p>
+                        인천 차이나타운에는 짜장면을 맛볼 수 있는 다양한 중국집이 있다. 짜장면의 발상지로 알려진 공화춘, 하얀 백년짜장이 주 메뉴인 만다복, 콩을 베이스로 만든 하얀짜장이 대표 메뉴인 연경 등이 있다. 주말에는 다소 웨이팅이 있을 수 있다. 
+                     </p>
+
+                    <hr>
+                    <h2 id="information03">개항장거리 음식소개</h2>
+                    <h3>신포시장 닭강정</h3>
+                    <div class="box_photo">
+                        <img src="images/sinpopark1.jpg" alt="신포시장 닭강정1" class="box_photo1">
+                        <img src="images/sinpopark2.jpg" alt="신포시장 닭강정2" class="box_photo1">
+                    </div>  
+                    <p style="text-align: center;">
+                        신포시장 닭강정은 인천광역시 중구 신포동에 위치한 신포시장의 명물로, 매콤달콤한 맛과 바삭한 튀김이 특징이다. 신포시장 닭강정은   TV 프로그램인 수요미식회, 백종원의 3대천왕에도 소개되었다.  
+                    </p>
+                </div>  
+            </section>
+            <section>
+                <div>
+                    <h2 id="information04">개항장거리 숙소안내</h2>
+                    <h3>하버파크 호텔</h3>
+                    <div class="box_photo">
+                        <img src="images/harbor_hotel1.jpg" alt="개항장거리2" class="box_photo2">
+                        <img src="images/harbor_hotel2.jpg" alt="개항장거리3" class="box_photo2">
+                        <hr>
+                        <img src="images/harbor_hotel3.jpg" alt="개항장거리2" class="box_photo2">
+                        <img src="images/harbor_hotel4.jpg" alt="개항장거리3" class="box_photo2">
+                    </div>  
+                    <p>
+                        하버 파크 호텔은 월미도의 해안가에 위치해 있으며, 인천항의 파노라마 뷰를 제공하며,월미도 놀이공원, 차이나타운, 전통 정원과 같은 인근 명소를 탐험하며 아름다움과 문화를 만끽할 수 있다. 월미도에 위치한 하버 파크 호텔은 해변의 매력, 짜릿한 명소, 신선한 해산물을 제공하여 많은 관광객들에게 인기를 끌고 있다. 
+                    </p>
+                </div>  
+            </section>
+        </main> 
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <a href="#"><button type="button" id="logo_footer"></button></a>
+            </li>
+            <li>
+                <p>&copy; Incheon Tourism Organization. All Rights Reserved.</p>
+            </li>
+            <li>
+                <a href="#">개인정보 처리방침</a>
+                <a href="#">이메일무단수집거부</a>
+                <a href="#">영상정보처리기기 운영·관리방침</a>
+                <select id="officialPage">
+                    <option>관련사이트 안내</option>
+                    <option value="Site01"><a href="https://www.incheon.go.kr/index" target="_blank">인천광역시청</a></option>
+                    <option value="Site02"><a href="https://www.ifez.go.kr/intro.do" target="_blank">경제자유구역청</a></option>
+                    <option value="Site03"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank">문화체육관광부</a></option>
+                    <option value="Site04"><a href="https://www.mois.go.kr/frt/a01/frtMain.do" target="_blank">행정안전부</a></option>
+                    <option value="Site05"><a href="https://knto.or.kr/index" target="_blank">한국관광공사</a></option>
+                    <option value="Site06"><a href="https://www.ih.co.kr/" target="_blank">인천도시공사</a></option>
+                    <option value="Site07"><a href="https://www.ictr.or.kr/main/" target="_blank">인천교통공사</a></option>
+                </select>     
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

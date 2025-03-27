@@ -1,0 +1,500 @@
+@charset "utf-8";
+  
+
+* {margin: 0; padding: 0; box-sizing: border-box;} /*스타일시트 초기화 선언*/
+.screen_out{
+    display: none;
+}
+html,body {
+    color:#323232; margin: auto;
+}
+a {
+    text-decoration: none; color:black; 
+}
+img {
+    display: block; max-width: 100%;
+}
+
+ul{list-style: none;}
+
+hr {color: #17246c; margin: 10px;}
+
+p{text-align:center; /* margin: auto; */}
+
+/*기본설정 시작, 렌더링부분 설정 시작*/
+  
+/*전체 레이아웃 */
+#layout{
+    max-width: 768px; margin: auto;
+    
+}
+/*헤더*/
+header h1 #logo{
+    background:transparent; background-image: url(../images/logo.png); background-repeat: no-repeat; width: 90px; height: 45px; border: none;
+}
+
+header {
+    max-width: 375px; padding: 10px 0; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 2px 15px #1c246c; flex-direction: column;
+}
+header nav ul {
+    display: flex; 
+}
+
+header nav ul li.mainmenu {
+    margin: 0 2px;
+}
+
+header nav ul li.mainmenu a {
+    color: #f7f7f7; font-size: 0.8rem; text-decoration: transparent;  text-align: center; display: block; letter-spacing: -2px; margin: 0 2px;
+}
+
+header nav ul li.mainmenu a:hover { 
+    color: #72b2fb; font-weight: bold; text-decoration: underline; 
+}
+
+header nav ul li.mainmenu span{
+    display: none;
+}
+/*상단 메뉴 종료*/
+
+/* 슬라이드 Style */
+.slidebox {max-width:100%; margin:0 auto;}
+.slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+.slidebox .slidelist .slideitem > a img {max-width:100%;}
+.slidebox .slidelist .slideitem > a label {position:absolute; top:50%; cursor:pointer;}
+/* .slidebox .slidelist .slideitem > a label.prev {left:20px; border: 1px solid red; background: url(/images/left_button.png);}
+.slidebox .slidelist .slideitem > a label.next {right:20px; border: 1px solid red; background: url(/images/right_button.png);} */
+
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 15s infinite;}
+#slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 15s infinite;}
+#slide03:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 15s infinite;}
+
+
+@keyframes slide01 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:-100%}
+	66% {left:-100%;}
+	67% {left:-200%;}
+	99% {left:-200%;}
+	100% {left:0%;}
+}
+
+@keyframes slide02 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:-100%;}
+	66% {left:-100%;}
+	67% {left:100%;}
+	99% {left:100%;}
+	100% {left:0%;}
+}
+
+@keyframes slide03 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:200%;}
+	66% {left:200%;}
+	67% {left:100%;}
+	99% {left:100%;}
+	100% {left:0%;}
+}
+/*슬라이드 종료*/
+
+
+/*메인 메뉴 시작*/
+main {
+    width: 100%; margin: auto; text-align:justify; padding: 2%;
+} 
+
+
+main section:nth-child(1) h2{
+    padding: 20px 0; 
+}
+
+main section:nth-child(1) h3{
+    padding: 5px 0; font-family: "Yeon Sung", system-ui; font-size: 1.4rem;
+}
+
+main section:nth-child(1) img{
+    width: 95%; margin-top: 10px; border-radius: 15px;
+}
+
+main section { font-size: 0.8rem;
+    padding: 10px;
+}
+
+main section .mainContents{
+    border-radius: 20px; 
+    border: 1px solid rgba(28  , 36, 108, 0.9);
+    padding: 20px;
+}
+
+.box_photo{
+    display: flex;
+}
+
+.box_photo1{
+    width: 49%; padding: 10px 1px; border-radius: 10px;
+}
+
+.box_photo2{
+    width: 22%; padding: 3px; border-radius: 10px;
+}
+
+
+main img {
+    margin-top: 50px;
+    width: 90%; display: block; margin: auto;
+    border-radius: 20px;
+}
+
+main h2 {text-align: center; display: block; margin-top: 20px;
+}
+
+main h3 {margin: 25px 0; text-align: center; display: block; margin-bottom: 15px; font-family: "Gaegu", sans-serif; font-size:1.2rem; font-weight: 400;}
+
+main p { margin-top: 20px; margin: auto;
+    text-align: center; margin-bottom: 50px; width: fit-content; padding: 20px;
+
+}
+
+footer{
+    width: 100%;
+    padding: 0  20px;
+    background: #464543;
+    color: #99968f;
+    margin: auto;
+}
+
+footer #logo_footer{
+    background:transparent; background-image: url(../images/logo_footer.png); background-repeat: no-repeat; width: 90px; height: 45px; border: none;
+}
+
+footer li a, li p { text-align: center;}
+
+footer a{ color: #99968f; font-size: 0.8rem; display: block;}
+
+footer ul {display: flex; justify-content: center; align-items: center; list-style: none; flex-direction: column;}
+
+footer ul li {
+    padding: 0 5px;
+}
+
+footer li:nth-child(1){
+    flex: 1; 
+}
+
+footer li:nth-child(2){
+    flex: 0.5; 
+}
+
+footer li:nth-child(2) p {
+    text-align: center;
+}
+
+footer li:nth-child(3){
+    padding: 2px; text-align: center;
+}
+
+footer li:nth-child(3) a {
+    text-align: center; padding-bottom: 5px;
+}
+footer li:last-child select{
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    left:20px;
+    margin-top: 10px;
+}
+
+
+
+@media(min-width:376px) and ( max-width:767px){
+    header {
+        max-width: 100%; padding: 10px; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-around; 
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 15px #1c246c;
+    }
+
+    header nav ul li.mainmenu {
+        margin: 0 2px;
+       }
+
+    header nav ul li.mainmenu a {
+        font-size: 0.9rem; display: block; text-align: center; justify-content: space-between; letter-spacing: -2px; margin: 0 2px;
+    }
+
+    li.mainmenu span{
+        display: none;
+    }
+
+    footer ul{
+        flex-direction: column;
+    }
+}
+
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    header {
+        max-width: 100%; padding: 8px 0; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-around; align-items: center;
+        box-shadow: 0 2px 15px #1c246c; flex-direction: row; text-align: center; 
+    }
+
+    header h1 #logo{
+        background:transparent; background-image: url(../images/logo.png); width: 90px; height: 45px; border: none;
+    }
+
+    header nav ul {
+         display: flex; justify-content: space-between; align-items: center; 
+    }
+
+    header nav ul li.mainmenu a {
+         display: block; text-align: center; font-size: 1rem; margin: 2px; letter-spacing: 0;
+    }
+
+
+    header nav ul li.mainmenu span{
+        display: block; color: #f7f7f77d; font-size: 1rem; display: block;
+    }
+
+    #layout {max-width: 1024px;}
+
+    main section:nth-child(1) img{
+        width: 75%; padding: 10px;
+    }
+    footer{
+        width: 100%;
+        padding: 0  50px;
+        background: #464543;
+        color: #99968f;
+        margin: auto;
+    }
+    
+    footer #logo_footer{
+        background:transparent; background-image: url(../images/logo_footer.png); background-repeat: no-repeat; width: 90px; height: 45px; border: none;
+    }
+    
+    footer li a, li p { text-align: center;}
+    
+    footer a{ font-size: 0.9rem; padding: 0px 10px;}
+    
+    footer ul {display: flex; justify-content: space-around; align-items: center; list-style: none; flex-direction: row;}
+    
+    footer ul li {
+        padding: 0 20px;
+    }
+    
+    footer ul li:nth-child(1){
+        flex: 0.2; width: 30%;
+    }
+    
+    footer ul li:nth-child(2){
+        flex: 0.7; width: 40%;
+    }
+    
+    footer ul li:nth-child(2) p {
+        text-align: center;
+    }
+    
+    footer ul li:nth-child(3){
+        padding: 10px; text-align: center; 
+
+    }
+    
+    footer li:last-child select{ 
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        left:20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1400px){
+
+    header {
+        max-width: 1400%; padding: 10px; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-between; align-items: center;
+        box-shadow: 0 2px 15px #1c246c; flex-direction: row;
+    }
+
+    header nav ul {
+        display: flex; justify-items: center; align-items: center; text-align: center; margin: 0 auto;
+   }
+
+    header nav ul li.mainmenu a{
+        font-size: 1.4rem; margin: 0 4px;
+    }
+   
+
+    header nav ul li.mainmenu span{
+        display: block; color:#f7f7f77d; font-size: 1.1rem; width: fit-content; height: fit-content; margin: 0 2px;
+
+   }
+
+   #layout {max-width: 1400px;}
+
+   main section:nth-child(1) img{
+       width: 75%; padding: 10px;
+   }
+   footer{
+       width: 100%;
+       padding: 0  50px;
+       background: #464543;
+       color: #99968f;
+       margin: auto;
+   }
+   
+   footer #logo_footer{
+       background:transparent; background-image: url(../images/logo_footer.png); background-repeat: no-repeat; width: 90px; height: 45px; border: none;
+   }
+   
+   footer li a, li p { text-align: center;}
+   
+   footer a{ font-size: 1.2rem; padding: 0px 10px;}
+   
+   footer ul {display: flex; justify-content: space-between; align-items: center; list-style: none; flex-direction: row;}
+   
+   footer ul li {
+       padding: 0 20px;
+   }
+   
+   footer li:nth-child(1){
+       flex: 0.2; width: 30%;
+   }
+   
+   footer li:nth-child(2){
+       flex: 0.9; width: 40%;
+   }
+   
+   footer li:nth-child(2) p {
+       text-align: center;
+   }
+   
+   footer li:nth-child(3){
+       padding: 3px; text-align: center;
+   }
+   
+   footer li:nth-child(3) a {
+       text-align: center; padding-bottom: 10px;
+   }
+   footer li:last-child select{
+       margin: auto;
+       padding: 10px;
+       border-radius: 5px;
+       left:20px;
+       margin-top: 10px;
+   }
+}
+
+
+
+
+
+
+
+@media (min-width: 1401px) { 
+
+    header {
+        max-width: 100%; padding: 0 100px; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-between; align-items: center;  flex-direction: row;
+        box-shadow: 0 2px 15px #1c246c;
+    }
+
+    header h1 #logo{
+        background:transparent; background-image: url(../images/logo_big.png); width: 200px; height: 100px; border: none;
+    }
+
+    header nav ul li.mainmenu a{
+        font-size: 1.8rem; margin: 0 4px;
+    }
+   
+
+    header nav ul li.mainmenu span{
+        display: block; color:#f7f7f77d; font-size: 1.8rem; width: fit-content; height: fit-content; margin: 0 7px;}
+    
+    /* 슬라이드 Style */
+    .slidebox {max-width:100%; width:100%;margin:0 auto;text-align:center;}
+    .slidebox img {max-width:100%;}
+
+
+    /*슬라이드 아래 출력되는 메인 컨테이너 부분*/
+    #layout{
+        max-width: 100%; margin: 10px 10px; 
+        padding: 0 50px;
+    }
+    #main img {
+    margin-top: 50px;
+    display: block; margin: auto;
+    border-radius: 20px;
+    }
+
+    #main hr{
+        margin: auto;
+    }
+
+    main section:nth-child(1) h2{
+        padding: 5px 0; 
+    }
+    
+    main section:nth-child(1) h3{
+        padding: 5px 0; font-family: "Yeon Sung", system-ui; font-size: 2rem;
+    }
+    
+    main section:nth-child(1) img{
+        width: 95%; margin-top: 10px; border-radius: 15px;
+    }
+
+    main section .mainContents{
+        border-radius: 20px; 
+        border: 1px solid rgba(28  , 36, 108, 0.9);
+        box-shadow: 1px 1px 10px rgba(28  , 36, 108, 0.4);
+        padding: 5px;
+    }
+    
+    main section div h2 {
+        font-size: 3rem; padding: 10px 0; width: fit-content; text-align: center; margin: auto; 
+        margin-bottom: 1px;
+    }
+
+
+    main section div h3 {
+        font-size: 2.4rem; padding: 5px 0; /* border: 1px solid red; */ text-align: center; display: block;
+    }
+
+    
+    main p { margin-top: 20px; font-size: 1.4rem;
+    text-align: center; margin-bottom: 50px; width: fit-content; padding: 20px;
+    
+    }
+
+    footer #logo_footer{
+        background:transparent; background-image: url(../images/logo_footer_big.png); background-repeat: no-repeat; width: 200px; height: 100px; border: none;
+    }
+
+    footer ul {display: flex; justify-content: space-around; align-items: center; list-style: none; flex-direction: row;}
+
+/*     footer li{
+        border: 1px solid red;
+    } */
+
+    footer li:nth-child(1){
+        flex: 0.2; 
+    }
+    
+    footer li:nth-child(2){
+        flex: 0.5; 
+    }
+    
+    footer li:nth-child(2) p {
+        text-align: center;
+    }
+
+} 
