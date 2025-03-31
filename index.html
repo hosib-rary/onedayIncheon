@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>
-            <a href="#"><button type="button" id="logo"></button></a>  
+            <img src="images/logo.png" alt="logo" id="logo">
         </h1>
         <nav>
             <ul>
@@ -146,7 +146,7 @@
     <footer>
         <ul>
             <li>
-                <a href="#"><button type="button" id="logo_footer"></button></a>
+                <img src="images/logo_footer_big.png" alt="logo_footer">
             </li>
             <li>
                 <p>&copy; Incheon Tourism Organization. All Rights Reserved.</p>
@@ -155,16 +155,16 @@
                 <a href="#">개인정보 처리방침</a>
                 <a href="#">이메일무단수집거부</a>
                 <a href="#">영상정보처리기기 운영·관리방침</a>
-                <select id="officialPage">
-                    <option>관련사이트 안내</option>
-                    <option value="Site01"><a href="https://www.incheon.go.kr/index" target="_blank">인천광역시청</a></option>
-                    <option value="Site02"><a href="https://www.ifez.go.kr/intro.do" target="_blank">경제자유구역청</a></option>
-                    <option value="Site03"><a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank">문화체육관광부</a></option>
-                    <option value="Site04"><a href="https://www.mois.go.kr/frt/a01/frtMain.do" target="_blank">행정안전부</a></option>
-                    <option value="Site05"><a href="https://knto.or.kr/index" target="_blank">한국관광공사</a></option>
-                    <option value="Site06"><a href="https://www.ih.co.kr/" target="_blank">인천도시공사</a></option>
-                    <option value="Site07"><a href="https://www.ictr.or.kr/main/" target="_blank">인천교통공사</a></option>
-                </select>     
+                <select onchange="window.open(this.value);">
+                          <option>관련사이트 안내</option>
+                          <option value="https://www.incheon.go.kr/index">인천광역시청</option>
+                          <option value="https://www.ifez.go.kr/intro.do">경제자유구역청</option>
+                          <option value="https://www.mcst.go.kr/kor/main.jsp">문화체육관광부</option>
+                          <option value="https://www.mois.go.kr/frt/a01/frtMain.do">행정안전부</option>
+                          <option value="https://knto.or.kr/index">한국관광공사</option>
+                          <option value="https://www.ih.co.kr/">인천도시공사</option>
+                          <option value="https://www.ictr.or.kr/main/">인천교통공사</option>
+                </select>
             </li>
         </ul>
     </footer>
