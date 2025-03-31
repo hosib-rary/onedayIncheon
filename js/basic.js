@@ -45,4 +45,18 @@ $(document).ready(function(){
         return false; 
     }); 
 
+
+
+    const toLeft = ()=> {
+        $('.slide').stop().animate({left:'-100vw'}, 800, ()=> {
+            $('.slide').append( $('.slide img').first()  );
+            $('.slide').css("left" , 0);
+        });
+    }
+
+
+    setInterval( toLeft, 2900);
+
+
+
 });//프로그램 끝. 
