@@ -5,7 +5,7 @@
 .screen_out{
     display: none;
 }
-
+::-webkit-scrollbar {width:0;}
 html{
     scroll-behavior: smooth;
 }
@@ -34,14 +34,12 @@ p{text-align:center; /* margin: auto; */}
     
 }
 /*헤더*/
-header h1 #logo{
-    background:transparent; background-image: url(../images/logo.png); background-repeat: no-repeat; width: 90px; height: 45px; border: none;
-}
 
 header {
     max-width: 375px; padding: 10px 0; background: rgba(28  , 36, 108, 0.9); display: flex; justify-content: space-between; align-items: center;
     box-shadow: 0 2px 15px #1c246c; flex-direction: column;
 }
+
 header nav ul {
     display: flex; 
 }
@@ -64,7 +62,7 @@ header nav ul li.mainmenu span{
 /*상단 메뉴 종료*/
 
 /* 슬라이드 Style */
-.slidebox {max-width:100%; margin:0 auto;}
+/* .slidebox {max-width:100%; margin:0 auto;}
 .slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
 .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
 .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
@@ -72,6 +70,11 @@ header nav ul li.mainmenu span{
 .slidebox .slidelist .slideitem > a label {position:absolute; top:50%; cursor:pointer;}
 /* .slidebox .slidelist .slideitem > a label.prev {left:20px; border: 1px solid red; background: url(/images/left_button.png);}
 .slidebox .slidelist .slideitem > a label.next {right:20px; border: 1px solid red; background: url(/images/right_button.png);} */
+ */
+ .slidebox {overflow: hidden;}
+.slide {width:300vw; display:flex; position: relative; left:0;}
+.slide img {width:100vw;}
+
 
 
 [name="slide"] {display:none;}
@@ -500,7 +503,7 @@ a#goTop{
 
    #sideSection{
     display: none;}
-    
+
 }
 
 
